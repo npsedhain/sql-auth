@@ -4,7 +4,7 @@ const config = require("./config");
 const db = require("./db");
 const morgan = require("morgan");
 
-const apiRouter = require("./controllers/api.route")();
+const apiRouter = require("./controllers/api.route")(express, app);
 
 app.use(morgan("dev"));
 
