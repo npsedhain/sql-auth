@@ -14,7 +14,7 @@ const login = (req, res, next) => {
     for (let i = 0; i < users.length; i++) {
       loginFlag = users[i].loggedIn;
       console.log("flag>>", loginFlag);
-      if (loginFlag === true) {
+      if (loginFlag) {
         break;
       }
     }
@@ -99,7 +99,8 @@ const logout = (req, res, next) => {
     for (let i = 0; i < users.length; i++) {
       loginFlag = users[i].loggedIn;
       loggedUser = users[i];
-      if (loginFlag === true) {
+      console.log("loggg> >", loginFlag);
+      if (loginFlag) {
         break;
       }
     }
